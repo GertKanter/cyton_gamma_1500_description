@@ -37,21 +37,21 @@
   <joint name="shoulder_roll_joint" type="revolute">
     <parent link="base_link"/>
     <child link="shoulder_roll"/>
-    <origin rpy="0 0 0" xyz="0 0 0.053"/>
+    <origin rpy="0 0 0" xyz="0 0 0.05315"/>
     <limit effort="100.0" lower="-2.618" upper="2.618" velocity="1.0"/>
     <axis xyz="0 0 1"/>
   </joint>
   <link name="shoulder_roll">
     <visual>
-      <origin rpy="0 -1.5708 3.5256" xyz="0 0 0"/>
+      <origin rpy="1.5708 0 0.384" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://cyton_gamma_1500_description/meshes/shoulder_roll.dae"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.069 0.0055 0.0544"/>
+      <origin xyz="0.0 0.069 0.0587"/>
       <geometry>
-        <box size="0.18143 0.0839 0.0955"/>
+        <box size="0.09829 0.18143 0.08392"/>
       </geometry>
     </collision>
   </link>
@@ -70,9 +70,9 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="-0.001 0.064 0.1759"/>
+      <origin xyz="-0.001 0.064 0.1745"/>
       <geometry>
-        <box size="0.0709 0.1936 0.08"/>
+        <box size="0.0709 0.19363 0.083"/>
       </geometry>
     </collision>
   </link>
@@ -91,16 +91,16 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="-0.0225 0.039 0.3052"/>
+      <origin xyz="-0.0225 0.039 0.3068"/>
       <geometry>
-        <box size="0.0717 0.1846 0.0726"/>
+        <box size="0.0717 0.1846 0.0756"/>
       </geometry>
     </collision>
   </link>
   <joint name="elbow_pitch_joint" type="revolute">
     <parent link="shoulder_yaw"/>
     <child link="elbow_pitch"/>
-    <origin rpy="0 0 0" xyz="0.018 0.0215 0.1158"/>
+    <origin rpy="0 0 0" xyz="0.018 0.0206 0.1158"/>
     <limit effort="100.0" lower="-1.8326" upper="1.8326" velocity="1.0"/>
     <axis xyz="1 0 0"/>
   </joint>
@@ -112,16 +112,16 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.0346 0.046 0.4214"/>
+      <origin xyz="0.0346 0.0461 0.4228"/>
       <geometry>
-        <box size="0.0549 0.1556 0.0735"/>
+        <box size="0.0549 0.1557 0.076"/>
       </geometry>
     </collision>
   </link>
   <joint name="elbow_yaw_joint" type="revolute">
     <parent link="elbow_pitch"/>
     <child link="elbow_yaw"/>
-    <origin rpy="0 0 0" xyz="-0.0185 -0.018 0.0973"/>
+    <origin rpy="0 0 0" xyz="-0.0171 -0.018 0.09746"/>
     <limit effort="100.0" lower="-1.8326" upper="1.8326" velocity="1.0"/>
     <axis xyz="0 -1 0"/>
   </joint>
@@ -133,16 +133,16 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.0162 0.0211 0.516"/>
+      <origin xyz="0.0172 0.0209 0.516"/>
       <geometry>
-        <box size="0.0535 0.1165 0.0402"/>
+        <box size="0.0535 0.1160 0.0402"/>
       </geometry>
     </collision>
   </link>
   <joint name="wrist_pitch_joint" type="revolute">
     <parent link="elbow_yaw"/>
     <child link="wrist_pitch"/>
-    <origin rpy="0 0 0" xyz="0.02325 0.018 0.0718"/>
+    <origin rpy="0 0 0" xyz="0.02626 0.018 0.0718"/>
     <limit effort="100.0" lower="-1.8326" upper="1.8326" velocity="1.0"/>
     <axis xyz="1 0 0"/>
   </joint>
@@ -154,16 +154,16 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.0248 0.0118 0.5614"/>
+      <origin xyz="0.0257 0.0118 0.5617"/>
       <geometry>
-        <box size="0.026 0.0435 0.0519"/>
+        <box size="0.026 0.0435 0.05185"/>
       </geometry>
     </collision>
   </link>
   <joint name="wrist_roll_joint" type="revolute">
     <parent link="wrist_pitch"/>
     <child link="wrist_roll"/>
-    <origin rpy="0 0 0" xyz="-0.02625 0 0.05142"/>
+    <origin rpy="0 0 0" xyz="-0.026255 0 0.051425"/>
     <limit effort="100.0" lower="-2.61799" upper="2.61799" velocity="1.0"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -175,16 +175,16 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.0022 -0.003 0.6042"/>
+      <origin xyz="-0.0063 -0.0014 0.6102"/>
       <geometry>
-        <box size="0.0546 0.0745 0.1118"/>
+        <box size="0.0518 0.0723 0.1004"/>
       </geometry>
     </collision>
   </link>
   <joint name="gripper_joint" type="prismatic">
     <parent link="wrist_roll"/>
     <child link="gripper_finger1"/>
-    <origin rpy="0 0 0" xyz="0.008 -0.00305 0.08868"/>
+    <origin rpy="0 0 0" xyz="-0.01331 0.00485 0.077225"/>
     <limit effort="100.0" lower="-0.008" upper="0.008" velocity="1.0"/>
     <axis xyz="1 0 0"/>
   </joint>
@@ -196,7 +196,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0.0135 0.0093 0.7365"/>
+      <origin xyz="-0.0167 0.0172 0.7254"/>
       <geometry>
         <box size="0.015 0.0229 0.0475"/>
       </geometry>
@@ -205,7 +205,7 @@
   <joint name="gripper_joint2" type="prismatic">
     <parent link="wrist_roll"/>
     <child link="gripper_finger2"/>
-    <origin rpy="0 0 0" xyz="-0.008 -0.00305 0.08868"/>
+    <origin rpy="0 0 0" xyz="0.0098 0.00485 0.077225"/>
     <limit effort="100.0" lower="-0.008" upper="0.008" velocity="1.0"/>
     <mimic joint="gripper_joint" multiplier="-1"/>
     <axis xyz="1 0 0"/>
@@ -218,7 +218,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin xyz="-0.0175 0.0093 0.7365"/>
+      <origin xyz="0.0132 0.0172 0.7254"/>
       <geometry>
         <box size="0.015 0.0229 0.0475"/>
       </geometry>
@@ -227,7 +227,7 @@
   <joint name="virtual_endeffector_joint" type="fixed">
     <parent link="wrist_roll"/>
     <child link="virtual_endeffector"/>
-    <origin rpy="0 0 0" xyz="0 0 0.090875"/>
+    <origin rpy="0 0 0" xyz="-0.002316 0.0079 0.079425"/>
   </joint>
   <link name="virtual_endeffector">
     <visual>
