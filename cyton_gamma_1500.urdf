@@ -144,7 +144,7 @@
     <child link="wrist_pitch"/>
     <origin rpy="0 0 0" xyz="0.02626 0.018 0.0718"/>
     <limit effort="100.0" lower="-1.8326" upper="1.8326" velocity="1.0"/>
-    <axis xyz="1 0 0"/>
+    <axis xyz="-1 0 0"/>
   </joint>
   <link name="wrist_pitch">
     <visual>
@@ -224,6 +224,7 @@
       </geometry>
     </collision>
   </link>
+  <!-- virtual end-effector -->
   <joint name="virtual_endeffector_joint" type="fixed">
     <parent link="wrist_roll"/>
     <child link="virtual_endeffector"/>

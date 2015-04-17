@@ -157,7 +157,7 @@
       <child link="${prefix}wrist_pitch" />
       <origin xyz="0.02626 0.018 0.0718" rpy="0 0 0" />
       <limit lower="-1.8326" upper="1.8326" effort="100.0" velocity="1.0" />
-      <axis xyz="1 0 0" />
+      <axis xyz="-1 0 0" />
     </joint>
 
     <link name="${prefix}wrist_pitch">
