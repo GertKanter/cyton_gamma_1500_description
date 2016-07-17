@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cyton_gamma_1500">
 
   <xacro:macro name="base_footprint" params="prefix">
-    <link name="base_footprint">
+    <link name="${prefix}base_footprint">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -15,7 +15,7 @@
     </link>
 
     <joint name="base_joint" type="fixed">
-      <parent link="base_footprint" />
+      <parent link="${prefix}base_footprint" />
       <child link="${prefix}base_link" />
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
     </joint>
